@@ -5,9 +5,9 @@
 In this tutorial, we will run through some basic and then some more advanced features of Autoware, the first all-in-one open source autonomous driving system.
 
 # Exercises
-- Exercise 0: Introduction (or how we're doing to be doing things)
-- Exercise 1: Setting up your Autoware test environment
-- Exercise 2: Running Autoware and replaying recorded sensor data
-- Exercise 3: Object detection and sensor fusion
-- Exercise 4: Traffic Light Recognition
-- Exercise 5: Simulation testing with dummy objects
+- [Exercise 0: Introduction (or how we're doing to be doing things)](exercises/exercise0.md)
+- [Exercise 1: Setting up your Autoware test environment](exercises/exercise1.md)
+- [Exercise 2: Running Autoware and replaying recorded sensor data](exercises/exercise2.md)
+- [Exercise 3: Object detection and sensor fusion](exercises/exercise3.md)
+- [Exercise 4: Traffic Light Recognition](exercises/exercise4.md)
+- [Exercise 5: Simulation testing with dummy objects](exercises/exercise5.md)
