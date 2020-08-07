@@ -1,4 +1,4 @@
-# Exercise 2: Running Autoware and replaying recorded sensor data
+# Exercise 2: RViz basics and replaying a rosbag
 
 TODO
 

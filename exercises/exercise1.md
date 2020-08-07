@@ -6,4 +6,4 @@ If you're following along with the ARM DevSummit workshop, then you should be al
 
 | Next |
 | ---- |
-| [Exercise 2: Running Autoware and replaying recorded sensor data](exercise2.md) |
+| [Exercise 2: RViz basics and replaying a rosbag](exercise2.md) |
