@@ -5,11 +5,15 @@ For this exercise, we will be using the Planning Simulator which only requires a
 ## Run RViz and set initial and goal poses
 1. Open a terminal window, navigate to the Autoware.IV install directory and run the following command:
    
-`source ./install/setup.bash`
+```
+source ./install/setup.bash
+```
 
 2. Run RViz with the following command:
 
-`roslaunch autoware_launch planning_simulator.launch map_path:=/home/[username]/Downloads/planning_simulator_sample_map`
+```
+roslaunch autoware_launch planning_simulator.launch map_path:=/home/[username]/Downloads/planning_simulator_sample_map
+```
 - By default, RViz will open with an ImageView panel in the bottom-left corner, but this can be closed since it will not be used during this exercise.
 ![](images/exercise5/rviz.png)
 
@@ -19,16 +23,21 @@ For this exercise, we will be using the Planning Simulator which only requires a
 ![](images/exercise5/toolbar_2D_pose.png)
 
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
+
 ![](images/exercise5/initial_pose.png)
 
 4. Set the goal pose of the ego-vehicle
 - Click the “2D Nav Goal” button in the toolbar, or hit the “G” key
 ![](images/exercise5/toolbar_2D_navgoal.png)
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
+
 ![](images/exercise5/goal_pose.png)
 
 5. Confirm initial pose, goal pose and route are displayed
+
 ![](images/exercise5/poses_route.png)
+
+---
 
 ## Adding and removing dummy obstacles, both moving and stationary
 6. Add a dummy car
@@ -55,8 +64,10 @@ For this exercise, we will be using the Planning Simulator which only requires a
 ![](images/exercise5/toolbar_delete_all_objects.png)
 - Click the display
 
+---
+
 ## "Number One, Engage!"
-10. Adjust RViz viewpoint to ThirdPersonFollower to see objects in 3D
+10.  Adjust RViz viewpoint to ThirdPersonFollower to change from a top-down 2D view to a 3D view
 - In the Views panel on the left side of the window, click the Type dropdown box and select "ThirdPersonFollower"
 - Double-click the Target Frame value and select "base_link"
 - Click the “Zero” button

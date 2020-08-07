@@ -1,6 +1,10 @@
 # Exercise 0: Introduction (or how we're going to be doing things)
 
-Throughout these exercises, two terminal windows will be required to run Autoware (the number of terminals is dependent on the complexity of the overall system). You're welcome to do this in whichever way you prefer, but we're going to use the [Terminator application](https://gnometerminator.blogspot.com/p/introduction.html) and all exercises going forward will show Terminator screenshots.
+1. For the most, two terminal windows will be required for these exercises (the number of terminals scales with the complexity of the overall system and can be as many as 10-12 in an actual autonomous vehicle!). 
+
+2. Whilst those following these exercises can use their preferred terminal, the [Terminator application](https://gnometerminator.blogspot.com/p/introduction.html) will be used in any videos accompanying the workshop, and any terminal screenshots in the exercises will be taken from Terminator.
+
+3. 
 
 | Next |
 | ---- |
