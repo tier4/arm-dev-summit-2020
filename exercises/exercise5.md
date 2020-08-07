@@ -37,13 +37,13 @@ For this exercise, we will be using the Planning Simulator which only requires a
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
 ![](images/exercise5/dummy_car_moving.png)
 
-1. Add a dummy pedestrian
+7. Add a dummy pedestrian
 - Click the “2D Dummy Pedestrian” button in the toolbar, or hit the “L” key
 ![](images/exercise5/toolbar_2D_dummy_pedestrian.png)
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
 ![](images/exercise5/dummy_pedestrian_moving.png)
 
-1. Make dummy pedestrians and dummy vehicles stationary, and add a stationary dummy vehicle
+8. Make dummy pedestrians and dummy vehicles stationary, and add a stationary dummy vehicle
 - In the [Tool Properties] panel in the lower-left, under [2D Dummy Car], set Velocity to 0
 - Click the “2D Dummy Car” button
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
@@ -60,16 +60,20 @@ For this exercise, we will be using the Planning Simulator which only requires a
 - In the Views panel on the left side of the window, click the Type dropdown box and select "ThirdPersonFollower"
 - Double-click the Target Frame value and select "base_link"
 - Click the “Zero” button
+
 ![](images/exercise5/views_properties.png)
 ![](images/exercise5/thirdpersonfollowerview_with_dummy_vehicle.png)
 
 11.  Use the Autoware Web UI to start the ego vehicle moving
 - Open a browser and go to http://localhost:8085/autoware_web_controller
 ![](images/exercise5/autoware_web_ui.png)
+
 - Under “Velocity Limit : Connected”, set the maximum velocity and click the “Send” button
 - Under “Autoware Engage: Connected”, click the “Engage” button
 ![](images/exercise5/autoware_web_ui_engage.png)
+
 - In the Web UI, Autoware State will change from "WaitingForEngage" to "Engage" and the ego-vehicle should now start moving along the route to the goal pose
+  
 ![](images/exercise5/autoware_ui_engaged.png)
 
 
