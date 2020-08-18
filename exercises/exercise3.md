@@ -31,7 +31,18 @@ rosbag play --clock ~/ARMDevSummit2020_AutowareWorkshop/ex3/ex3.bag -r 1
 
 5. In RViz, switch to ThirdPersonFollower view and adjust the view to your preference.
 
-6. Return to the second terminal and hit the space bar again to resume playback, then return to RViz.
+6. Add an Image panel that shows the recorded camera image data with perception data from the LiDAR sensor overlaid on top. 
+- RViz toolbar -> Add -> by topic -> /sensing -> /camera ->
+
+![](images/exercise3/add_sensor_fusion_image_view.png)
+
+7. Return to the second terminal and hit the space bar again to resume playback, then return to RViz. Your RViz view should hopefully look similar to the image below
+
+![](images/exercise3/sensor_fusion_one_camera.png)
+
+8. Now, we've just displayed data from a single camera, but the rosbag actually contains data from six (!) cameras, so let's see what those six cameras look like when shown all together.
+
+![](images/exercise3/sensor_fusion_six_cameras.png)
 
 | Next |
 | ---- |
