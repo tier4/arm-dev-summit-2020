@@ -8,10 +8,11 @@ For participants of the ARM DevSummit Autoware workshop, a VM instance has been 
 2. At the next screen, click “SignIn” in the top-right hand corner
 ![](images/exercise1/02_signin.png)
 
-1. Next, click “testaccount.tier4.jp” and then log in with the Tier IV test environment account details that were emailed to prior to the workshop
+3. Next, click “testaccount.tier4.jp” and then log in with the Tier IV test environment account details that were emailed to prior to the workshop
+![](images/exercise1/02_2_testaccountdialog.png)
 ![](images/exercise1/03_signin_dialog.png)
 
-4. After logging in, click the Play button in the top-right hand corner, then click "OK" when the dialog pops up. The inactive button to the left will change from "STOPPED" to "LOADING" as the VM instance is started up. 
+1. After logging in, click the Play button in the top-right hand corner, then click "OK" when the dialog pops up. The inactive button to the left will change from "STOPPED" to "LOADING" as the VM instance is started up. 
 ![](images/exercise1/04_postlogin.png)
 ![](images/exercise1/05_charge_dialog.png)
 ![](images/exercise1/06_loading.png)
