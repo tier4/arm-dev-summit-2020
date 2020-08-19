@@ -33,15 +33,18 @@ rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf
 5. In RViz, switch to ThirdPersonFollower view and adjust the view to your preference.
 
 6. Close the Tool Properties and Image panels by clicking the X in the top-right corner of each panel
+
 ![](images/exercise3/close_panels.png)
 
 7. Add an Image panel that shows the recorded camera image data with perception data from the LiDAR sensor overlaid on top. 
 - Click the Add button in the Displays panel of RViz
 - In the dialog that appears, click the "By topic" tab, scroll down to "/sensing", then double-click on "/camera"
+
 ![](images/exercise3/displays_panel.png)
 ![](images/exercise3/add_sensor_fusion_image_view.png)
 
 8. Return to the second terminal and hit the space bar again to resume playback, then return to RViz. Your RViz view should hopefully look similar to the image below
+
 ![](images/exercise3/sensor_fusion_one_camera.png)
 
 9. Now, we've just displayed data from a single camera, but the rosbag actually contains data from six (!) cameras, so let's see what those six cameras look like when shown all together as a pseudo-360 degree frame of view. Manually setting RViz to display all of the cameras and arranging them would take a while, so instead we're going to use a RViz configuration file.
@@ -56,12 +59,13 @@ roslaunch autoware_launch logging_simulator.launch vehicle_model:=jpntaxi sensor
 rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf_null /tf_static:=/tf_static_null /perception/object_recognition/tracking/objects:=/perception/object_recognition/tracking/objects_null /perception/object_recognition/objects:=/perception/object_recognition/objects_null /perception/object_recognition/detection/objects:=/perception/object_recognition/detection/objects_null /sensing/camera/traffic_light/camera_info:=/sensing/camera/traffic_light/camera_info_null /localization/twist:=/localization/twist_null
 ```
 - If all has gone well, then you should see something similar to the image below. Going clockwise from the right column, the camera images represent
--- Rear right camera
--- Rear centre camera
--- Rear left camera
--- Front left camera
--- Front centre camera
--- Front right camera
+    - Rear right camera
+    - Rear centre camera
+    - Rear left camera
+    - Front left camera
+    - Front centre camera
+    - Front right camera
+    
 ![](images/exercise3/sensor_fusion_six_cameras.png)
 
 | Next |
