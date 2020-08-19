@@ -19,7 +19,7 @@ To:
 ```
 cd ~/autoware.proj
 source ./install/setup.bash
-export VEHICLE_ID=1089
+export VEHICLE_ID=4941
 roslaunch autoware_launch logging_simulator.launch vehicle_model:=jpntaxi sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
 ```
 
@@ -44,7 +44,24 @@ rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf
 8. Return to the second terminal and hit the space bar again to resume playback, then return to RViz. Your RViz view should hopefully look similar to the image below
 ![](images/exercise3/sensor_fusion_one_camera.png)
 
-9. Now, we've just displayed data from a single camera, but the rosbag actually contains data from six (!) cameras, so let's see what those six cameras look like when shown all together.
+9. Now, we've just displayed data from a single camera, but the rosbag actually contains data from six (!) cameras, so let's see what those six cameras look like when shown all together as a pseudo-360 degree frame of view. Manually setting RViz to display all of the cameras and arranging them would take a while, so instead we're going to use a RViz configuration file.
+- If RViz is not open and the first terminal is showing a command prompt, then re-run the roslaunch command
+```
+roslaunch autoware_launch logging_simulator.launch vehicle_model:=jpntaxi sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
+```
+- Next, click on "File" in the top-left corner of the RViz toolbar then "Open Config"
+- Browse to the following location `/home/autoware/handson/exercise5/autoware_fusion.rviz`
+- Bring up the second terminal and re-run the `rosbag play` command
+```
+rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf_null /tf_static:=/tf_static_null /perception/object_recognition/tracking/objects:=/perception/object_recognition/tracking/objects_null /perception/object_recognition/objects:=/perception/object_recognition/objects_null /perception/object_recognition/detection/objects:=/perception/object_recognition/detection/objects_null /sensing/camera/traffic_light/camera_info:=/sensing/camera/traffic_light/camera_info_null /localization/twist:=/localization/twist_null
+```
+- If all has gone well, then you should see something similar to the image below. Going clockwise from the right column, the camera images represent
+-- Rear right camera
+-- Rear centre camera
+-- Rear left camera
+-- Front left camera
+-- Front centre camera
+-- Front right camera
 ![](images/exercise3/sensor_fusion_six_cameras.png)
 
 | Next |
