@@ -51,4 +51,4 @@ Toggle “NoGroundPointCloud” off and on by clicking the checkbox.
 
 | Next |
 | ---- |
-| [Exercise 3: Object detection and sensor fusion](exercise3.md) |
+| [Exercise 3: NDT Scan Matching](exercise3.md) |
