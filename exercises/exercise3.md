@@ -1,4 +1,4 @@
-# Exercise 3: Object detection and sensor fusion
+# Exercise 3: NDT Scan Matching
 
 1. Open the autoware.launch file, which should be located in the following folder:
 ~/AutowareArchitectureProposal/src/launcher/autoware_launch/launch
@@ -70,4 +70,4 @@ rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf
 
 | Next |
 | ---- |
-| [Exercise 4: Traffic Light Recognition](exercise4.md) |
+| [Exercise 4: Simulation testing with dummy objects](exercise4.md) |
