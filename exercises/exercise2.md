@@ -3,23 +3,23 @@
 ## Launch RViz, start and pause rosbag playback
 1. Open two terminal windows and run the following commands in *both* terminals
 ```
-cd /home/[username]/Autoware.IV
+cd /home/autoware/autoware.proj
 source ./install/setup.bash
 ``` 
 2. In the first terminal, launch RViz
 ```
-roslaunch autoware_launch autoware.launch rosbag:=true map_path:=[rosbag_sample_map_path]
+roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex2/maps
 ```
 3. In the second terminal, play the rosbag file
 ```
-rosbag play --clock [sample.bag path]/sample.bag -r 0.2
+rosbag play --clock /home/autoware/handson/ex2/sample.bag -r 0.2
 ```
-4. In the still active second terminal, hit the spacebar to pause rosbag playback
+4. In the still active second terminal, hit the spacebar after a second to pause rosbag playback
 
 ---
 
 ## Adjust the RViz view (TopDownOrth and ThirdPersonFollower)
-5. Adjust RViz view (TopDownOrth): 
+5. Click on the RViz icon to bring the GUI to the front, and then adjust RViz view (TopDownOrth): 
 - Clicking and holding the left mouse button then moving the mouse rotates the view in the same plane
 - Clicking and holding the right mouse button then moving the mouse zooms in/out
 - Holding the shift key and moving the mouse pans the view
@@ -29,7 +29,7 @@ rosbag play --clock [sample.bag path]/sample.bag -r 0.2
 - Double-click the Target Frame value and select "base_link"
 - Click the “Zero” button
 
-![](images/exercise5/views_properties.png)
+![](images/exercise4/views_properties.png)
 
 7. Adjust RViz view (ThirdPersonFollower):
 - In ThirdPersonFollower view, clicking and holding the left mouse button then moving the mouse rotates the view in all directions

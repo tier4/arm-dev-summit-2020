@@ -1,72 +1,60 @@
 # Exercise 3: NDT Scan Matching
 
-1. Open the autoware.launch file, which should be located in the following folder:
-~/AutowareArchitectureProposal/src/launcher/autoware_launch/launch
+The purpose of this exercise is to show some features of Autoware's localization, which is achieved through a method called NDT Scan Matching. 
 
-2. Under the `<!-- Perception -->` section, edit the following line as follows:
+## Automatic self-pose estimation using GNSS
+In the past, it was necessary to manually set the initial pose of the ego-vehicle, or to have recorded data containing a manually set initial pose. It is now possible for Autoware to estimate the initial pose of the ego-vehicle automatically using GNSS sensor data. This is a new feature that will be added to Autoware.Auto in the near future.
 
-From:
-```xml
-<arg name="mode" value="lidar"/>
+1. Open two terminal windows and run the following commands in *both* terminals
 ```
-
-To:
-```xml
-<arg name="mode" value="camera_lidar_fusion"/>
-```
-
-3. Open two terminals, and run the following commands in the first terminal:
-```
-cd ~/autoware.proj
+cd /home/autoware/autoware.proj
 source ./install/setup.bash
-export VEHICLE_ID=4941
-roslaunch autoware_launch logging_simulator.launch vehicle_model:=jpntaxi sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
+``` 
+2. In the first terminal, launch RViz
 ```
+roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex3/maps
+```
+3. In the second terminal, play the rosbag file and then click on the RViz icon to bring the RViz window to the front
+```
+rosbag play --clock /home/autoware/handson/ex3/sample.bag -r 0.2
+```
+Whilst still in the 2D TopDownOrth view, we can see the recorded LiDAR sensor data being displayed, and then after a few seconds, the NDT Scan Matching algorithm uses recorded GNSS data to establish an initial pose that is then used to match up the LiDAR sensor data with the high-definition pointcloud map data loaded into memory.
 
-4. In the second terminal, run the following commands, then hit the space bar to pause rosbag playback:
+TODO: Add a screenshot showing a TopDownOrth view of the ego-vehicle + LiDAR and map
+
+## Pose estimation without GNSS initial pose
+If GNSS data is not available, then the initial pose of the ego-vehicle can be manually set using RViz (something that we will come back to in the next exercise). For now, let's see what happens if we try to replay a rosbag with GNSS sensor data removed.
+
+4. Open two new terminal windows and run the following commands in *both* terminals
 ```
-cd ~/autoware.proj
+cd /home/autoware/autoware.proj
 source ./install/setup.bash
-rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf_null /tf_static:=/tf_static_null /perception/object_recognition/tracking/objects:=/perception/object_recognition/tracking/objects_null /perception/object_recognition/objects:=/perception/object_recognition/objects_null /perception/object_recognition/detection/objects:=/perception/object_recognition/detection/objects_null /sensing/camera/traffic_light/camera_info:=/sensing/camera/traffic_light/camera_info_null /localization/twist:=/localization/twist_null
+``` 
+5. In the first terminal, launch RViz
 ```
-
-5. In RViz, switch to ThirdPersonFollower view and adjust the view to your preference.
-
-6. Close the Tool Properties and Image panels by clicking the X in the top-right corner of each panel
-
-![](images/exercise3/close_panels.png)
-
-7. Add an Image panel that shows the recorded camera image data with perception data from the LiDAR sensor overlaid on top. 
-- Click the Add button in the Displays panel of RViz
-- In the dialog that appears, click the "By topic" tab, scroll down to "/sensing", then double-click on "/camera"
-
-![](images/exercise3/displays_panel.png)
-![](images/exercise3/add_sensor_fusion_image_view.png)
-
-8. Return to the second terminal and hit the space bar again to resume playback, then return to RViz. Your RViz view should hopefully look similar to the image below
-
-![](images/exercise3/sensor_fusion_one_camera.png)
-
-9. Now, we've just displayed data from a single camera, but the rosbag actually contains data from six (!) cameras, so let's see what those six cameras look like when shown all together as a pseudo-360 degree frame of view. Manually setting RViz to display all of the cameras and arranging them would take a while, so instead we're going to use a RViz configuration file.
-- If RViz is not open and the first terminal is showing a command prompt, then re-run the roslaunch command
+roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex3/maps
 ```
-roslaunch autoware_launch logging_simulator.launch vehicle_model:=jpntaxi sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
+6. In the second terminal, play the rosbag file and then click on the RViz icon to bring the RViz window to the front
 ```
-- Next, click on "File" in the top-left corner of the RViz toolbar then "Open Config"
-- Browse to the following location `/home/autoware/handson/exercise5/autoware_fusion.rviz`
-- Bring up the second terminal and re-run the `rosbag play` command
+rosbag play --clock /home/autoware/handson/ex3/sample.bag -r 0.2
 ```
-rosbag play /home/autoware/handson/ex3/fusion_sample.bag --clock -r 0.5 /tf:=/tf_null /tf_static:=/tf_static_null /perception/object_recognition/tracking/objects:=/perception/object_recognition/tracking/objects_null /perception/object_recognition/objects:=/perception/object_recognition/objects_null /perception/object_recognition/detection/objects:=/perception/object_recognition/detection/objects_null /sensing/camera/traffic_light/camera_info:=/sensing/camera/traffic_light/camera_info_null /localization/twist:=/localization/twist_null
-```
-- If all has gone well, then you should see something similar to the image below. Going clockwise from the right column, the camera images represent
-    - Rear right camera
-    - Rear centre camera
-    - Rear left camera
-    - Front left camera
-    - Front centre camera
-    - Front right camera
-    
-![](images/exercise3/sensor_fusion_six_cameras.png)
+7. Whilst still in the 2D TopDownOrth view, you will note that the ego vehicle does not appear as before. To see the ego-vehicle, pause the rosbag playback and change the Target Frame of the view to "base_link".
+- In the Views panel on the left side of the window, double-click the Target Frame value and select "base_link"
+- Click the "Zero" button
+
+TODO: Add image showing TopDownOrth, but with the Target View set to "base_link"
+
+The view now shows the ego-vehicle and the recorded LiDAR sensor data, but the HD map is not displayed because it's impossible for the NDT Scan Matching algorithm to match the LiDAR sensor data to the map's pointcloud data without an initial pose.
+
+TODO: Add a screenshot showing a TopDownOrth view of the ego-vehicle + LiDAR without the map showing
+
+1. Repeat steps 4-6, but this time hit the spacebar to pause the rosbag's playback after about 5 seconds.
+
+2. Go back to RViz, scroll the map to the approximate position of where the ego-vehicle should be (behind the stop line of the intersection), then click the "2D Pose Estimate" button, then click and hold the left mouse button in the desired position and drag in the direction that the ego-vehicle is facing.
+
+3.  Go back to the second terminal and hit spacebar to resume playback
+
+Given an initial pose, the NDT Scan Matching algorithm is now able to match the sensor data with the map's pointcloud data. 
 
 | Next |
 | ---- |
