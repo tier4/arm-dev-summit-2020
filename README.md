@@ -2,7 +2,7 @@
 <a href="https://devsummit.arm.com/"><img src="Arm-DevSummit-EmailBanner-500x120-1A.png" alt="ARM Dev Summit Logo"></a>
 
 # Hands-on workshop at Arm DevSummit October 2020
-In this tutorial, we will run through some basic and then some more advanced features of Autoware, the first all-in-one open source autonomous driving system.
+During this workshop, we will run through some of the features of Autoware, the first all-in-one open source autonomous driving system.
 
 ## Minimum System Requirements
 ### Hardware
