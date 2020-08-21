@@ -12,49 +12,66 @@ source ./install/setup.bash
 ``` 
 2. In the first terminal, launch RViz
 ```
-roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex3/maps
+roslaunch autoware_launch logging_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
 ```
-3. In the second terminal, play the rosbag file and then click on the RViz icon to bring the RViz window to the front
+3. In the second terminal, play the rosbag file
 ```
-rosbag play --clock /home/autoware/handson/ex3/sample.bag -r 0.2
+rosbag play /home/autoware/handson/ex3/sample.bag --clock -r 0.5
 ```
-Whilst still in the 2D TopDownOrth view, we can see the recorded LiDAR sensor data being displayed, and then after a few seconds, the NDT Scan Matching algorithm uses recorded GNSS data to establish an initial pose that is then used to match up the LiDAR sensor data with the high-definition pointcloud map data loaded into memory.
 
-TODO: Add a screenshot showing a TopDownOrth view of the ego-vehicle + LiDAR and map
+4. In the still active second terminal, hit the spacebar after a second to pause rosbag playback, then change the Target Frame of the view to "base_link" in RViz.
+- In the Views panel on the left side of the window, double-click the Target Frame value and select "base_link"
+- Click the "Zero" button
+
+![](images/exercise3/01_views_panel_topdownorth_baselink.png)
+
+5. Hit the spacebar in the second terminal to resume rosbag playback and return to RViz
+
+Whilst still in the 2D TopDownOrth view, we can see the recorded LiDAR sensor data being displayed first, and then after a few seconds, the NDT Scan Matching algorithm is able to match up the LiDAR sensor data with the high-definition pointcloud map data loaded into memory by using recorded GNSS data to establish the initial pose of the ego-vehicle.
+
+![](images/exercise3/02_topdownorth_ndt_scan_matching.png)
 
 ## Pose estimation without GNSS initial pose
 If GNSS data is not available, then the initial pose of the ego-vehicle can be manually set using RViz (something that we will come back to in the next exercise). For now, let's see what happens if we try to replay a rosbag with GNSS sensor data removed.
 
-4. Open two new terminal windows and run the following commands in *both* terminals
+6. Open two new terminal windows and run the following commands in *both* terminals
 ```
 cd /home/autoware/autoware.proj
 source ./install/setup.bash
 ``` 
-5. In the first terminal, launch RViz
+7. In the first terminal, launch RViz
 ```
-roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex3/maps
+roslaunch autoware_launch logging_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex3/maps
 ```
-6. In the second terminal, play the rosbag file and then click on the RViz icon to bring the RViz window to the front
+8. In the second terminal, play the rosbag file
 ```
-rosbag play --clock /home/autoware/handson/ex3/sample.bag -r 0.2
+rosbag play /home/autoware/handson/ex3/sample_no_gnss.bag --clock -r 0.5
 ```
-7. Whilst still in the 2D TopDownOrth view, you will note that the ego vehicle does not appear as before. To see the ego-vehicle, pause the rosbag playback and change the Target Frame of the view to "base_link".
-- In the Views panel on the left side of the window, double-click the Target Frame value and select "base_link"
-- Click the "Zero" button
+9. In the still active second terminal, hit the spacebar after a second to pause rosbag playback, then change the Target Frame of the view to "base_link" in RViz again.
 
-TODO: Add image showing TopDownOrth, but with the Target View set to "base_link"
+10. Hit the spacebar in the second terminal to resume rosbag playback and return to RViz
 
-The view now shows the ego-vehicle and the recorded LiDAR sensor data, but the HD map is not displayed because it's impossible for the NDT Scan Matching algorithm to match the LiDAR sensor data to the map's pointcloud data without an initial pose.
+The view shows the ego-vehicle and the recorded LiDAR sensor data as before, but the HD map is not displayed because it's impossible for the NDT Scan Matching algorithm to match the LiDAR sensor data to the map's pointcloud data without an initial pose.
 
-TODO: Add a screenshot showing a TopDownOrth view of the ego-vehicle + LiDAR without the map showing
+![](images/exercise3/03_topdownorth_no_scan_matching.png)
 
-1. Repeat steps 4-6, but this time hit the spacebar to pause the rosbag's playback after about 5 seconds.
 
-2. Go back to RViz, scroll the map to the approximate position of where the ego-vehicle should be (behind the stop line of the intersection), then click the "2D Pose Estimate" button, then click and hold the left mouse button in the desired position and drag in the direction that the ego-vehicle is facing.
+So now we're going to try again, but this time we will set a initial pose manually to see what happens.
 
-3.  Go back to the second terminal and hit spacebar to resume playback
+11. Repeat steps 6-9, but this time wait around 5 seconds before hitting the spacebar to pause the rosbag's playback
 
-Given an initial pose, the NDT Scan Matching algorithm is now able to match the sensor data with the map's pointcloud data. 
+12. Go back to RViz, scroll the map to the approximate position of where the ego-vehicle should be
+![](images/exercise3/04_manually_set_initial_pose.png)
+
+13.  Set the initial pose of the ego-vehicle manually.
+- Click “2D Pose estimate” button in the toolbar, or hit the “P” key
+![](images/exercise4/toolbar_2D_pose.png)
+
+- Click and hold the left-mouse button, and then drag to set the direction of the pose
+
+14.  Go back to the second terminal and hit spacebar to resume playback
+
+Now, things should work in much the same way as they did at the start of the exercise, when GNSS sensor data was available. Given an initial pose, the NDT Scan Matching algorithm is now able to match the sensor data with the map's pointcloud data! 
 
 | Next |
 | ---- |

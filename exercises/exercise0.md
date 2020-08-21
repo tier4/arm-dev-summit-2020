@@ -4,6 +4,10 @@
 
 2. Whilst those following these exercises can use their preferred terminal, the [Terminator application](https://gnometerminator.blogspot.com/p/introduction.html) will be included with the VMs provided for the workshop and will also be used in any videos accompanying the workshop.
 
+- When running commands in multiple terminal Windows, the broadcast function of Terminator can be used:
+    - Press Alt + A to turn broadcast on (all keyboard input will appear in all windows)
+    - Press Alt + O to turn broadcast off
+
 | Next |
 | ---- |
 | [Exercise 1: Setting up your Autoware test environment](exercise1.md) |
