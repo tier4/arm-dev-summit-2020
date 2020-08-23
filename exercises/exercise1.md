@@ -24,7 +24,7 @@
 
 ![](images/exercise1/06_Choose_Instance.png) 
 
-7. The "Launch" button change to "LOADING" as the VM instance is being created. 
+7. The "Launch" button will change to "LOADING" as the VM instance is being created. 
 
 ![](images/exercise1/07_loading.png)
 
