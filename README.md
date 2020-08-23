@@ -4,20 +4,15 @@
 # Hands-on workshop at Arm DevSummit October 2020
 During this workshop, we will run through some of the features of Autoware, the first all-in-one open source autonomous driving system.
 
-## Minimum System Requirements
+## Minimum System Requirements for the workshop
 ### Hardware
- - x86 CPU (8 cores)
- - 16GB RAM 
- - NVIDIA GPU (4GB memory)
+ - [A Windows/Mac/Linux computer that is capable of supporting Google Chrome](https://support.google.com/chrome/a/answer/7100626?hl=en)
 
 ### Software
- - Ubuntu 18.04
- - NVIDIA driver
-
+ - Google Chrome (latest version)
 
 ### Recommendations
-- Run Ubuntu natively. Whilst Ubuntu can be easily run on other platforms as a virtual machine, Autoware is a computationally demanding piece of software that should be run natively whenever possible.
-- Remove existing installations of CUDA and TensorRT. If CUDA or TensorRT were installed prior to setting up Autoware, both of them should be removed to avoid any version conflicts.
+- Whilst some latency issues may occur, a high-speed Internet connection is strongly recommended to minimise the effect of such issues.
 
 # Exercises
 - [Exercise 0: Introduction (or how we're going to be doing things)](exercises/exercise0.md)

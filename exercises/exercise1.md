@@ -4,7 +4,7 @@
    
 ![](images/exercise1/01_RegistrationEmail.png)
 
-2. Using the latest version of the Chrome browse, navigate to https://beta.autoware.online/signin and click "Ignore" when the safety warning pops up.
+2. Using the Chrome browser, navigate to https://beta.autoware.online/signin and click "Ignore" when the safety warning pops up.
 
 ![](images/exercise1/02_SafetyWarning.png)
 

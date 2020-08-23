@@ -8,7 +8,7 @@ source ./install/setup.bash
 ``` 
 2. In the first terminal, launch RViz
 ```
-roslaunch autoware_launch autoware.launch rosbag:=true map_path:=/home/autoware/handson/ex2/maps
+roslaunch autoware_launch logging_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex2/maps
 ```
 3. In the second terminal, play the rosbag file
 ```
