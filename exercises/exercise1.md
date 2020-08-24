@@ -1,6 +1,6 @@
 # Exercise 1: Setting up your Autoware test environment
 
-1. For participants of the ARM DevSummit Autoware workshop, if all is well then you should have recieved an email from no-reply@autoware.online with the subject "[AutowareOnline] Complete your registration" similar to the one shown below.
+1. For participants of the ARM DevSummit Autoware workshop, if all is well then you should have received an email from no-reply@autoware.online with the subject "[AutowareOnline] Complete your registration" similar to the one shown below.
    
 ![](images/exercise1/01_RegistrationEmail.png)
 
@@ -24,11 +24,11 @@
 
 ![](images/exercise1/06_Choose_Instance.png) 
 
-7. The "Launch" button will change to "LOADING" as the VM instance is being created. 
+7. The "Launch" button will change to "LOADING" as the VM instance is being created - this process will take around a minute. 
 
 ![](images/exercise1/07_loading.png)
 
-8. After a minute or so, the "LOADING" button will change to say "Connect". Click this button.
+1. Once the VM has been created, the "LOADING" button will change to say "Connect". Click this button.
 
 ![](images/exercise1/08_Connect.png)
 

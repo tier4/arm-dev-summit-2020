@@ -1,6 +1,8 @@
 # Exercise 4: Simulation testing with dummy objects
 
-For this exercise, we will be using the Planning Simulator which only requires a single terminal window.
+The purpose of this exercise is to become familiar with Autoware's planning simulator, which can be used for a variety of things such as validating vector maps (containing metadata about the road layout, traffic rules etc) and verifying Autoware's route planning functionality.
+
+For this exercise, we will only need to use a single terminal window.
 
 ## Run RViz and set initial and goal poses
 1. Open a terminal window, navigate to the Autoware.IV install directory and run the following command:
@@ -12,7 +14,7 @@ source ./install/setup.bash
 2. Run RViz with the following command:
 
 ```
-roslaunch autoware_launch planning_simulator.launch map_path:=/home/autoware/handson/ex4/maps
+roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex4/maps
 ```
 - By default, RViz will open with an ImageView panel in the bottom-left corner, but this can be closed since it will not be used during this exercise.
 ![](images/exercise4/rviz.png)

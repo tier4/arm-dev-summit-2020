@@ -1,4 +1,5 @@
 # Exercise 2: RViz basics and replaying a rosbag
+The purpose of this exercise is to gain familiarity with the basic functionality of RViz and how to replay a rosbag. [RVIz](http://wiki.ros.org/rviz) is a 3D visualization tool for the ROS middleware that Autoware is based on, and [rosbag](http://wiki.ros.org/rosbag) is the file format used to record and playback data from a ROS-based system.
 
 ## Launch RViz, start and pause rosbag playback
 1. Open two terminal windows and run the following commands in *both* terminals
@@ -48,7 +49,9 @@ Toggle “ConcatenatePointCloud” off and on by clicking the checkbox.
 Pointcloud display will be toggled off and then on in the display
 Toggle “NoGroundPointCloud” off and on by clicking the checkbox.
 
+11. Once the rosbag playback has completed, click on the first terminal and press Ctrl + C to end the running roslaunch command, then close the Terminator window.
+
 
 | Next |
 | ---- |
-| [Exercise 3: NDT Scan Matching](exercise3.md) |
+| [Exercise 3: Localization using NDT Scan Matching](exercise3.md) |

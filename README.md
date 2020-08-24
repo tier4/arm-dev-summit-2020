@@ -18,5 +18,5 @@ During this workshop, we will be running through some of the features of Autowar
 - [Exercise 0: Introduction (or how we're going to be doing things)](exercises/exercise0.md)
 - [Exercise 1: Setting up your Autoware test environment](exercises/exercise1.md)
 - [Exercise 2: RViz basics and replaying a rosbag](exercises/exercise2.md)
-- [Exercise 3: NDT Scan Matching](exercises/exercise3.md)
+- [Exercise 3: Localization using NDT Scan Matching](exercises/exercise3.md)
 - [Exercise 4: Simulation testing with dummy objects](exercises/exercise4.md)
