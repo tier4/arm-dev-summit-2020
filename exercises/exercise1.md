@@ -14,7 +14,7 @@
 
 4. A new dialog will appear prompting you to change your password. The password must be 8 characters or more and contain at least one upper-case letter and one digit.
 
-![](images/exercise1/04_NewPassword.png)
+![](images/exercise1/04_ChangePassword.png)
 
 5. After you have changed your password, click the "Launch" button in the top-right hand corner of the next screen
 
