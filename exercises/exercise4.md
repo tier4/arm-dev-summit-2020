@@ -1,4 +1,4 @@
-# Exercise 5: Simulation testing with dummy objects
+# Exercise 4: Simulation testing with dummy objects
 
 For this exercise, we will be using the Planning Simulator which only requires a single terminal window.
 

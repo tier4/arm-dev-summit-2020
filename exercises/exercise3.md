@@ -56,7 +56,7 @@ The view shows the ego-vehicle and the recorded LiDAR sensor data as before, but
 ![](images/exercise3/03_topdownorth_no_scan_matching.png)
 
 
-So now we're going to try again, but this time we will set a initial pose manually to see what happens.
+So now we're going to try again, but this time we will set an initial pose manually to see what happens.
 
 11. Repeat steps 6-9, but this time wait around 5 seconds before hitting the spacebar to pause the rosbag's playback
 
