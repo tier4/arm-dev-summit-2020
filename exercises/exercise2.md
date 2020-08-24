@@ -15,7 +15,9 @@ roslaunch autoware_launch logging_simulator.launch vehicle_model:=lexus sensor_m
 ```
 rosbag play --clock /home/autoware/handson/ex2/sample.bag -r 0.2
 ```
-4. In the still active second terminal, hit the spacebar after a second to pause rosbag playback
+4. In the still active second terminal, hit the spacebar after a few seconds to pause rosbag playback. You should now see something similiar to the screenshot below.
+
+![](images/exercise2/01_ExpectedRVizView.png)
 
 ---
 
