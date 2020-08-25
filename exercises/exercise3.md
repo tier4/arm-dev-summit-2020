@@ -61,20 +61,22 @@ The view shows the ego-vehicle and the recorded LiDAR sensor data as before, but
     
 So now we're going to try again, but this time we will set an initial pose manually to see what happens.
 
-13.  Repeat steps 7-10, but this time wait around 5 seconds before hitting the spacebar to pause the rosbag's playback
-
-14.  Go back to RViz, scroll the map to the approximate position of where the ego-vehicle should be
+1.  Repeat steps 7-10, but this time wait around 5 seconds before hitting the spacebar to pause the rosbag's playback. The reason for doing so is to allow for ROS time to be initialised so that an initial pose can be manually set.
+   
+2.  Go back to RViz, scroll the map to the approximate position of where the ego-vehicle should be
 ![](images/exercise3/04_manually_set_initial_pose.png)
 
-15.  Set the initial pose of the ego-vehicle manually.
+14. Set the initial pose of the ego-vehicle manually.
 - Click “2D Pose estimate” button in the toolbar, or hit the “P” key
 ![](images/exercise4/toolbar_2D_pose.png)
 
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
 
-16.  Go back to the second terminal and hit spacebar to resume playback
+15. Go back to the second terminal and hit spacebar to resume playback
 
 Now, things should work in much the same way as they did at the start of the exercise, when GNSS sensor data was available. Given an initial pose, the NDT Scan Matching algorithm is now able to match the sensor data with the map's pointcloud data! 
+
+16. Once the rosbag playback has completed, click on the first terminal and press Ctrl + C to end the running roslaunch command, then close the Terminator window.
 
 | Next |
 | ---- |

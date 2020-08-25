@@ -1,4 +1,4 @@
-# Exercise 1: Setting up your Autoware test environment
+# Exercise 1: Setting up your Autoware Online test environment
 
 1. For participants of the ARM DevSummit Autoware workshop, if all is well then you should have received an email from no-reply@autoware.online with the subject "[AutowareOnline] Complete your registration" similar to the one shown below.
    

@@ -30,5 +30,5 @@ The number of terminals required when using Autoware scales with the complexity 
 
 | Next |
 | ---- |
-| [Exercise 1: Setting up your Autoware test environment](exercise1.md) |
+| [Exercise 1: Setting up your Autoware Online test environment](exercise1.md) |
 
