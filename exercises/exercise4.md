@@ -17,6 +17,7 @@ source ./install/setup.bash
 roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex4/maps
 ```
 - By default, RViz will open with an ImageView panel in the bottom-left corner, but this can be closed since it will not be used during this exercise.
+  
 ![](images/exercise4/rviz.png)
 
 
@@ -25,14 +26,13 @@ roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_
 ![](images/exercise4/toolbar_2D_pose.png)
 
 - Click and hold the left-mouse button, and then drag to set the direction of the pose
-
 ![](images/exercise4/initial_pose.png)
 
 4. Set the goal pose of the ego-vehicle
 - Click the “2D Nav Goal” button in the toolbar, or hit the “G” key
 ![](images/exercise4/toolbar_2D_navgoal.png)
-- Click and hold the left-mouse button, and then drag to set the direction of the pose
 
+- Click and hold the left-mouse button, and then drag to set the direction of the pose
 ![](images/exercise4/goal_pose.png)
 
 5. Confirm initial pose, goal pose and route are displayed
@@ -73,20 +73,19 @@ roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_
 - In the Views panel on the left side of the window, click the Type dropdown box and select "ThirdPersonFollower"
 - Double-click the Target Frame value and select "base_link"
 - Click the “Zero” button
-
 ![](images/exercise4/views_properties.png)
-![](images/exercise4/thirdpersonfollowerview_with_dummy_vehicle.png)
+
+![](images/exercise4/thirdpersonfollowerview.png)
 
 11.  Use the Autoware Web UI to start the ego vehicle moving
 - Open a browser and go to http://localhost:8085/autoware_web_controller
 ![](images/exercise4/autoware_web_ui.png)
 
-- Under “Velocity Limit : Connected”, set the maximum velocity and click the “Send” button
+- Under "Vehicle Engage”, click the "Engage" button
 - Under “Autoware Engage: Connected”, click the “Engage” button
 ![](images/exercise4/autoware_web_ui_engage.png)
 
-- In the Web UI, Autoware State will change from "WaitingForEngage" to "Engage" and the ego-vehicle should now start moving along the route to the goal pose
-  
+- In the Web UI, Autoware State will change from "WaitingForEngage" to "Driving" and the ego-vehicle should now start moving along the route to the goal pose
 ![](images/exercise4/autoware_ui_engaged.png)
 
 
