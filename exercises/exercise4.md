@@ -86,6 +86,7 @@ roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_
 ![](images/exercise4/autoware_web_ui_engage.png)
 
 - In the Web UI, Autoware State will change from "WaitingForEngage" to "Driving" and the ego-vehicle should now start moving along the route to the goal pose
+  
 ![](images/exercise4/autoware_ui_engaged.png)
 
 
