@@ -16,12 +16,11 @@ source ./install/setup.bash
 ```
 roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/home/autoware/handson/ex4/maps
 ```
-- By default, RViz will open with an ImageView panel in the bottom-left corner, but this can be closed since it will not be used during this exercise.
-  
+
 ![](images/exercise4/rviz.png)
 
 
-3. Set the initial pose of the ego-vehicle
+1. Set the initial pose of the ego-vehicle
 - Click “2D Pose estimate” button in the toolbar, or hit the “P” key
 ![](images/exercise4/toolbar_2D_pose.png)
 
