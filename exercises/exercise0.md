@@ -1,6 +1,6 @@
 # Exercise 0: Introduction (or some general points to note)
 
-1. The VMs provided for use by Tier IV do not have Internet access, and copy/paste functionality is not available, so all commands will need to manually typed out.
+1. The VMs provided for use by Tier IV do not have Internet access, and copy/paste functionality between the host and remote VM is not available. However, since copy/paste functionality on the remote VM itself still works (and because some of the commands that we will be using are quite long), a text file containing all necessary commands can be found on each VM at `/home/autoware/handson/exercise_commands.txt`.
 
 2. For the majority of the time, we will be using two terminal windows.
 
