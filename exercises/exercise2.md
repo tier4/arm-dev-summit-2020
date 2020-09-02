@@ -46,10 +46,9 @@ rosbag play --clock /home/autoware/handson/ex2/sample.bag -r 0.2
 9. Click in the second terminal, then hit the spacebar to resume rosbag playback
 
 10. Toggling display options
-In the `Displays` panel, click the triangle icons next to `Sensing` and then the one next `LiDAR`
-Toggle “ConcatenatePointCloud” off and on by clicking the checkbox.
-Pointcloud display will be toggled off and then on in the display
-Toggle “NoGroundPointCloud” off and on by clicking the checkbox.
+- In the `Displays` panel, click the triangle icons next to `Sensing` and then the one next `LiDAR`
+- Toggle “ConcatenatePointCloud” off and on by clicking the checkbox.
+- Toggle “NoGroundPointCloud” off and on by clicking the checkbox.
 
 11. Once the rosbag playback has completed, click on the first terminal and press Ctrl + C to end the running roslaunch command, then close the Terminator window.
 
