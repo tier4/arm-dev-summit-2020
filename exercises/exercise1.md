@@ -28,7 +28,7 @@
 
 ![](images/exercise1/07_loading.png)
 
-1. Once the VM has been created, the "LOADING" button will change to say "Connect". Click this button.
+8. Once the VM has been created, the "LOADING" button will change to say "Connect". Click this button.
 
 ![](images/exercise1/08_Connect.png)
 
