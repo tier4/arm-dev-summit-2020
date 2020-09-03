@@ -16,7 +16,7 @@
 
 ![](images/exercise1/04_ChangePassword.png)
 
-5. After you have changed your password, click the "Launch" button in the top-right hand corner of the next screen
+5. After you have changed your password, click the "Launch" button in the top-right hand corner of the next screen. If the "Launch" button does not appear after a few seconds, then refresh the page.
 
 ![](images/exercise1/05_PostLogin.png)
 
@@ -36,7 +36,7 @@
 
 ![](images/exercise1/09_Ubuntu_login.png)
 
-10. If the following screen is displayed instead of the expected Ubuntu login screen, click on “RECONNECT” in the middle of the screen to reconnect to the instance. If the "Connection Failed" screen keeps coming up, then please wait a few minutes before retrying.
+10. If the following screen is displayed instead of the expected Ubuntu login screen, click on “RECONNECT” in the middle of the screen to reconnect to the instance. If the "Connection Failed" screen keeps coming up, then please close the tab, wait a few minutes and then go back to step 8.
 
 ![](images/exercise1/10_Connection_failed.png)
 
