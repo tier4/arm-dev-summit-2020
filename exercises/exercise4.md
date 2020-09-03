@@ -89,5 +89,9 @@ roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_
 ![](images/exercise4/autoware_ui_engaged.png)
 
 
+12. Congratulations on reaching the end of the hands-on exercises! Before finishing, please return to the Autoware Online home page and click the pause icon in the top-right corner to stop your VM instance.
+
+![](images/exercise4/StopInstance.png)
+
 
 
