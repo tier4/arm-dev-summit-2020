@@ -1,6 +1,6 @@
 # Exercise 3: Localization using NDT Scan Matching
 
-The purpose of this exercise is to show some features of Autoware's localization, which is achieved through a method called NDT Scan Matching. At a very basic level, NDT Scan Matching can be thought of as an algorithm that is used to match LiDAR sensor data with an existing LiDAR point cloud map, in order to determine where the ego-vehicle is located. For a more detailed description of how the algorithm works, [read this Medium article by David Silver](https://medium.com/self-driving-cars/ndt-matching-acff8e7e01cb)
+The purpose of this exercise is to show some features of Autoware's localization, which is achieved through a method called NDT Scan Matching. At a very basic level, NDT (Normal Distribution Transform) Scan Matching is an algorithm that is used to match LiDAR sensor data with an existing LiDAR point cloud map, in order to determine where the ego-vehicle is located. For a more detailed description of how the algorithm works, [read this Medium article by David Silver](https://medium.com/self-driving-cars/ndt-matching-acff8e7e01cb)
 
 ## Automatic self-pose estimation using GNSS
 In the past, for Autoware to successfully localize the ego vehicle, it was necessary to manually set the initial pose of the ego-vehicle, or to have recorded data containing a manually set initial pose. It is now possible for Autoware to estimate the initial pose of the ego-vehicle automatically using GNSS sensor data. This is a new feature that will be added to Autoware.Auto in the near future.
