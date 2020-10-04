@@ -12,7 +12,7 @@ During this workshop, we will be running through some of the features of Autowar
  - Google Chrome (latest version)
 
 ### Recommendations
-- Whilst some latency issues may occur, a high-speed Internet connection is strongly recommended to minimise the effect of such issues.
+- Please note that the Autoware Online system is based in Japan and so there may be latency for users in Europe and the US. Thus a high-speed Internet connection is strongly recommended to minimise the effect of such issues.
 
 # Exercises
 - [Exercise 0: Introduction (or how we're going to be doing things)](exercises/exercise0.md)
@@ -20,3 +20,6 @@ During this workshop, we will be running through some of the features of Autowar
 - [Exercise 2: RViz basics and replaying a rosbag](exercises/exercise2.md)
 - [Exercise 3: Localization using NDT Scan Matching](exercises/exercise3.md)
 - [Exercise 4: Simulation testing with dummy objects](exercises/exercise4.md)
+
+# Workshop Q&A
+Any questions that cannot be answered during the workshop session itself will be recorded and answered [here](workshop_qa.md).
