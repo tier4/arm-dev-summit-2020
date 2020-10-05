@@ -77,7 +77,7 @@ roslaunch autoware_launch planning_simulator.launch vehicle_model:=lexus sensor_
 ![](images/exercise4/thirdpersonfollowerview.png)
 
 11.  Use the Autoware Web UI to start the ego vehicle moving
-- Open a browser and go to http://localhost:8085/autoware_web_controller
+- Open a browser and go to http://localhost:8085/autoware_web_controller (note that the web page may take a couple of minutes to appear)
 ![](images/exercise4/autoware_web_ui.png)
 
 - Under "Vehicle Engage”, click the "Engage" button
